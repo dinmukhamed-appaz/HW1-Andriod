@@ -1,10 +1,18 @@
 fun main() {
-    println(compare(timeSpentToday = 300, timeSpentYesterday = 250))
-    println(compare(timeSpentToday = 300, timeSpentYesterday = 300))
-    println(compare(timeSpentToday = 200, timeSpentYesterday = 220))
+    printCityWeather("Ankara", 27, 31, 82)
+    printCityWeather("Tokyo", 32, 36, 10)
+    printCityWeather("Cape Town", 59, 64, 2)
+    printCityWeather("Guatemala City", 50, 55, 7)
 }
 
-fun compare(timeSpentToday: Int, timeSpentYesterday: Int): Boolean {
-    return timeSpentToday > timeSpentYesterday
+fun printCityWeather(
+    cityName: String,
+    lowTemp: Int,
+    highTemp: Int,
+    chanceOfRain: Int
+) {
+    println("City: $cityName")
+    println("Low temperature: $lowTemp, High temperature: $highTemp")
+    println("Chance of rain: $chanceOfRain%")
+    println()
 }
-
